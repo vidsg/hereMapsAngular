@@ -1,0 +1,53 @@
+
+.container {
+  width: 1040px;
+  margin: 0 auto;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+#inner-header {
+	width: 1000px;
+}
+
+#logo {
+	display: block;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.main-nav {
+	display: block;
+}
+
+
+/*********************
+RESPONSIVE NAV
+*********************/
+
+.hamburger {
+	display: none;
+}
+
+.responsive-nav {
+	display: none;
+}
+
+.image-slider {
+	max-height: 450px;
+	img {
+		width: 100%;
+	}
+}
+
+/*
+* Application-specific Media - start
+*/
+
+/*
+* Application-specific Media - end
+*/

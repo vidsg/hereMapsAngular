@@ -1,0 +1,64 @@
+@mixin transition($transition...) {
+  // defining prefixes so we can use them in mixins below
+  $prefixes:      ("-webkit-", "" );
+  @each $prefix in $prefixes {
+    #{$prefix}transition: $transition;
+  }
+}
+@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
+	background-color: $to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+	background-image: -webkit-linear-gradient(top, $from, $to);
+	background-image: -moz-linear-gradient(top, $from, $to);
+	background-image: -o-linear-gradient(top, $from, $to);
+	background-image: linear-gradient(to bottom, $from, $to);
+}
+
+@mixin box-sizing($type: border-box) {
+	-webkit-box-sizing: $type;
+	-moz-box-sizing:    $type;
+	-ms-box-sizing:     $type;
+	box-sizing:         $type;
+}
+
+@mixin green-button-gradient() {
+  color: #ffffff;
+  background-color: #48b817;
+  /* IE9, iOS 3.2+ */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBzdG9wLWNvbG9yPSIjMzdjYjE4IiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiM1NzlmMWIiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjQ5OCIvPjxzdG9wIHN0b3AtY29sb3I9IiM2OWE2MWYiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjUxOCIvPjxzdG9wIHN0b3AtY29sb3I9IiMyNWQyMDkiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%,color-stop(0, rgb(55, 203, 24)),color-stop(0.498, rgb(87, 159, 27)),color-stop(0.518, rgb(105, 166, 31)),color-stop(1, rgb(37, 210, 9)));
+  /* Android 2.3 */
+  background-image: -webkit-repeating-linear-gradient(top,rgb(55, 203, 24) 0%,rgb(87, 159, 27) 49.8%,rgb(105, 166, 31) 51.8%,rgb(37, 210, 9) 100%);
+  /* IE10+ */
+  background-image: repeating-linear-gradient(to bottom,rgb(55, 203, 24) 0%,rgb(87, 159, 27) 49.8%,rgb(105, 166, 31) 51.8%,rgb(37, 210, 9) 100%);
+  background-image: -ms-repeating-linear-gradient(top,rgb(55, 203, 24) 0%,rgb(87, 159, 27) 49.8%,rgb(105, 166, 31) 51.8%,rgb(37, 210, 9) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff37cb18",endColorstr="#ff25d209",GradientType=0);
+
+}
+@mixin search-bar-style() {
+  line-height: 40px;
+  font-size: 16px;
+  height: 40px; 
+  .back-to-search,
+  .back-to-results {
+    width: 170px; 
+    cursor: pointer;  
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    @include green-button-gradient();
+  }
+  .back-to-results {    
+    width: 32px;
+    .fa {
+      font-size: 20px;
+    }
+  }
+  .back-to-search {
+    position: absolute;
+  }
+}
+
+

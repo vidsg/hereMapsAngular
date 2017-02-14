@@ -1,0 +1,6 @@
+{
+  	"CONFIG": {
+			"datasource": "prod",
+			"test_json": "this is to test"
+	}	
+}

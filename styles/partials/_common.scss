@@ -1,0 +1,26 @@
+.gradient {
+	height: 4px;
+	background-color: #388EDD;
+	background-image: linear-gradient(
+								      to right, 
+								      #388EDD, 
+								      #EE7C19, 
+								      #69A61F,
+								      #EE7C19, 
+								      #388EDD, 
+								      #EE7C19, 
+								      #69A61F,
+								      #EE7C19,
+								      #388EDD
+								    );
+}
+
+.spinner-modal {
+	position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  top: 0;
+  z-index: 2000000;
+  opacity: 0.4;
+}

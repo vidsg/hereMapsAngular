@@ -1,0 +1,6 @@
+{
+  	"CONFIG": {
+			"datasource": "localTest",
+			"test_json": "this is to test"
+	}	
+}
