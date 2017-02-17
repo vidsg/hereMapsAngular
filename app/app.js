@@ -19,7 +19,7 @@
             
             'ngRoute',
             'ngCookies',
-            'lodash'
+            'angular-here-maps'
         ]);
         
 

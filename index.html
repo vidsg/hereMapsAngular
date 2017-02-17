@@ -28,7 +28,7 @@
 		<!-- build:css css/style.min.css -->
 		<link rel="stylesheet" type="text/css" href="styles/shared-style.css" />
 		<link rel="stylesheet" type="text/css" href="styles/style.css" />
-		<!-- <link rel="stylesheet" href="http://js.api.here.com/v3/3.0/mapsjs-ui.css" /> -->
+		<link rel="stylesheet" href="http://js.api.here.com/v3/3.0/mapsjs-ui.css" />
 		<!-- endbuild -->
 		
 
@@ -38,13 +38,13 @@
 	
 		<!--[if lt IE 8]>
 		    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
+		<![endif]-->	
 
 		<!-- Navigation -->
 		<main-nav></main-nav>
 
 		<!-- Main view for templates -->
-		<div data-ng-view=""></div>
+		<div data-ng-view="" id="main-wrapper"></div>
 
 		<footer></footer>
 
@@ -54,11 +54,12 @@
 		<script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.js"></script>
 		<script type="text/javascript" src="bower_components/lodash/lodash.js"></script>
 		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-		<!-- <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
-		<script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
-		<script src="http://js.api.here.com/v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
-		<script src="http://js.api.here.com/v3/3.0/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
-		<script src="http://js.api.here.com/v3/3.0/mapsjs-pano.js" type="text/javascript" charset="utf-8"></script>	 -->	
+		<script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-core.js"></script>
+		<script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-service.js"></script>
+		<script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+		<script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+		<script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-pano.js"></script>
+		<script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-clustering.js"></script>
 		<!-- endbuild -->
 
 		<!-- Angular external libraries for application -->
@@ -80,6 +81,7 @@
 		<script type="text/javascript" src="app/factory.js"></script>
 		<script type="text/javascript" src="app/controller.js"></script>
 		<script type="text/javascript" src="app/constants/constants.js"></script>
+		<script type="text/javascript" src="app/error/custom-error.controller.js"></script>
 		<script type="text/javascript" src="app/map/map.controller.js"></script>
 		
 		
@@ -87,6 +89,7 @@
 
 		<!-- Angular components -->
 		<!-- build:appcomponents js/appcomponents.js -->
+		<script type="text/javascript" src="components/modules/angular-here-maps.js"></script>
 		<script type="text/javascript" src="components/directives/main-nav.directive.js"></script>
 		<script type="text/javascript" src="components/factory/read-config.factory.js"></script>
 		<!-- endbuild -->	

@@ -17,7 +17,8 @@
     function ReadConfig($http, $q) {
 
         var factory = {
-          getConfig: getConfig
+          getConfig: getConfig,
+          getResponse: getResponse
         };
         return factory;
 
@@ -25,6 +26,19 @@
             var deferred = $q.defer();
 
             $http.get("/config/config.json")
+                .success( function(response, status, headers, config) {
+                     deferred.resolve(response);
+                })
+                .error(function(errResp) {
+                     deferred.reject({ error: {message: "Error while reading configuration file. Please check your configuration settings." }});
+                });
+            return deferred.promise;
+        }
+
+        function getResponse() {
+            var deferred = $q.defer();
+
+            $http.get("/config/response.json")
                 .success( function(response, status, headers, config) {
                      deferred.resolve(response);
                 })

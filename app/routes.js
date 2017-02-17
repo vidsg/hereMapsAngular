@@ -45,7 +45,7 @@
         })
         .when('/map', {
             templateUrl: 'views/map.html',
-            controller: 'MapController',
+            controller: 'MapMainController',
             controllerAs: 'mapCntrl'
         })
         .otherwise({
